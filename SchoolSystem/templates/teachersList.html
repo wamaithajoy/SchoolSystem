@@ -8,50 +8,149 @@
     <title>Document</title>
 </head>
 <style>
-    #customers {
-      font-family: Arial, Helvetica, sans-serif;
-      border-collapse: collapse;
-      width: 100%;
-    }
-    
-    #customers td, #customers th {
-      border: 1px solid #ddd;
-      padding: 8px;
-    }
-    
-    #customers tr:nth-child(even){background-color: #f2f2f2;}
-    
-    #customers tr:hover {background-color: #ddd;}
-    
-    #customers th {
-      padding-top: 12px;
-      padding-bottom: 12px;
-      text-align: left;
-      background-color: #04AA6D;
-      color: white;
-    }
-    </style>
-<body>
-   <p>Teachers List</p>
-   
-   <table id="customers">
-    <tr>
-    <th>Firstname</th>
-    <th>Lastname</th>
-    <th>Unit Specialty</th>
-    <th>Contact</th>
-    <th>Email</th>
-    </tr>
-     {% for teacher in teachers%}
-     <tr>
-        <td>{{teacher.firstname}}</td>
-        <td>{{teacher.lastname}}</td>
-        <td>{{teacher.unit_specialty}}</td>
-        <td>{{teacher.contact}}</td>
-        <td>{{teacher.email}}</td>
-     </tr>
-     {% endfor %}
+  body{
+    background-color: #CF9FFF; 
+  }
+  #meet{
+    margin-left: 43%;
+    font-size:150%; 
+    margin-top:-3%;
+  }
 
-   </table>
+  #codehive{
+    width:38%;
+    margin-left: 7%;
+  }
+  #teacher{
+    width:45%;
+    margin-left: 7%;
+    height:47vh;
+    margin-top:3%;
+  }
+  #teacher1{
+    width:45%;
+    margin-left: 27.5%;
+    height:47vh;
+    margin-top:-21.2%;
+  }
+  #teacher2{
+    width:45%;
+    margin-left: 48%;
+    height:47vh;
+    margin-top:-21%;
+  }
+  #tag{
+   margin-left:15%;
+   margin-top:3%;
+  }
+  #tag1{
+    margin-left:44%; 
+    margin-top:-9.5%;
+  }
+  #tag2{
+    margin-left:73%; 
+    margin-top:-9.2%;
+    
+  }
+  #teacher3{
+    width:45%;
+    margin-left: 7%;
+    height:47vh;
+    margin-top:1%;
+  }
+  #tag3{
+    margin-left:15%;
+    margin-top:3%;
+   }
+   #teacher4{
+    width:45%;
+    margin-left: 27.5%;
+    height:47vh;
+    margin-top:-21.9%;
+  }
+  #tag4{
+    margin-left:44%; 
+    margin-top:-9.5%;
+  }
+  #tag5{
+    margin-left:75%; 
+    margin-top:-9.2%;
+    
+  }
+  #teacher5{
+    width:45%;
+    margin-left: 49%;
+    height:47vh;
+    margin-top:-21.2%;
+  }
+  
+  
+</style>
+<body>
+  
+<div id="codehive">
+  <img id="codehive" src="https://akirachix.com/img/code-hive.png?_cchid=138194327577c036438d36774d26b056">
+</div>
+<h1 id="meet">Meet our Instructors</h1>
+
+<div id="teacher">
+  <img id="teacher" src="https://akirachix.com/img/mwai-james.png?_cchid=6ab37ba819c550fbe83be343409289de">
+</div>
+<div id="tag">
+  <h4>JAMES MWAI</h4>
+  <h4>Co-Founder and CTO</h4>
+  <h4>skyGarden</h4>
+
+</div>
+
+<div id="teacher1">
+  <img id="teacher1" src="https://akirachix.com/img/john_owuor.jpg?_cchid=567da98ec76db34f7054c5e049dbecc4">
+</div>
+<div id="tag1">
+  <h4>JOHN OWUOR</h4>
+  <h4>Senior Developer</h4>
+  <h4>Twiga Foods</h4>
+
+</div>
+
+<div id="teacher2">
+  <img id="teacher2" src="https://akirachix.com/img/vero.png?_cchid=5297b9c4725caa6fad2822d37013f898">
+</div>
+<div id="tag2">
+  <h4>VERONICA THAMAINI</h4>
+  <h4>Senior Program Officer</h4>
+  <h4>Wikimedia Foundation</h4>
+
+</div>
+
+<div id="teacher3">
+  <img id="teacher3" src="https://akirachix.com/img/joy.jpg?_cchid=2c0ee9913beedfef52c6fe3f02412659">
+</div>
+<div id="tag3">
+  <h4>JOY WAMBUI</h4>
+  <h4>User Experience Researcher</h4>
+  <h4>Antara Health</h4>
+</div>
+
+<div id="teacher4">
+  <img id="teacher4" src="https://akirachix.com/img/barre.png?_cchid=d48abb53375506b674bc748017c1194e">
+</div>
+<div id="tag4">
+  <h4>BARRE YASSIN</h4>
+  <h4>Project Manager</h4>
+  <h4>Kenya, Field Ready</h4>
+</div>
+
+<div id="teacher5">
+  <img id="teacher5" src="https://akirachix.com/img/rodgers.jpg?_cchid=354600439d4ba5d2512a7ff647de5d67">
+</div>
+<div id="tag5">
+  <h4>RODGERS OWOWKO</h4>
+  <h4>Career Coach</h4>
+</div>
+
+
+
+
 </body>
 </html>

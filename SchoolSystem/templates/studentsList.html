@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<style>
+    #studentInfo {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    #studentInfo td, #customers th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    
+    #studentInfo tr:nth-child(even){background-color: #f2f2f2;}
+    
+    #studentInfo tr:hover {background-color: #ddd;}
+    
+    #studentInfo th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #04AA6D;
+      color: white;
+    }
+    </style>
+ 
+   <p>Student List</p>
+   
+   <table id="studentInfo">
+    <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Email</th>
+    <th>Gender</th>
+    <th>Address</th>
+    <th>Stream</th>
+    <th>Age</th>
+    <th>Phone Number</th>
+    <th>Nationality</th>
+
+
+    </tr>
+     {% for student in students%}
+     <tr>
+        <td>{{student.first_name}}</td>
+        <td>{{student.last_name}}</td>
+        <td>{{student.my_email}}</td>
+        <td>{{student.my_gender}}</td>
+        <td>{{student.myaddress}}</td>
+        <td>{{student.my_stream}}</td>
+        {% comment %} <td>{{student.age}}</td> {% endcomment %}
+        <td>{{student.my_contact}}</td>
+        <td>{{student.nationality}}</td>
+     </tr>
+     {% endfor %}
+    </table>
+
+     <a href= "{% url 'studentForm' %}">
+    <button class="button1">Add Student</button>
+    </a>
+</body>
+</html>

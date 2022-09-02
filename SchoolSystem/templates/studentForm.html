@@ -1,0 +1,116 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Index</title>  
+</head>  
+<style>
+  body {
+    background-color: #C5B4E3;
+  }
+    * {
+        box-sizing: border-box;
+      }
+      
+    input[type=text], select {
+      width: 40%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+     
+    }
+    input[type=number], select {
+        width: 40%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      input[type=email], select {
+        width: 40%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+    
+    input[type=submit] {
+      width: 100%;
+      background-color: #800080;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    input[type=submit]:hover {
+      background-color: #800080;
+      
+    }
+    
+    {% comment %} div {
+      border-radius: 5px;
+      {% comment %} background-color: #C5B4E3; {% endcomment %}
+      {% comment %} padding: 20px; {% endcomment %}
+    
+{% comment %} 
+     div{
+      background-color:#C5B4E3
+     } {% endcomment %}
+    #photo3{
+      width:67%;
+      margin-top: -28.6%;
+      margin-left: 30%;
+      border-radius: 50px 20px;
+    }
+    .button1 {
+      background-color:#800080; 
+      color: black; 
+      margin-left: 6%;
+      width:10%;
+      height:6vh;
+     
+    } 
+    .button1:hover {
+      background-color:white;
+      color: black;
+      box-shadow: 0 8px 16px 0 purple;
+    }
+
+  
+
+    </style> 
+<body>  
+    <form method="POST" class="post-form" enctype="multipart/form-data">
+        {{ form.as_p }}
+        {% csrf_token %}
+        
+        <button type="submit" class="button button1">Submit</button>
+        <div id="photo3">
+            <img id="photo3" src="https://hsiassetstorage.sfo2.digitaloceanspaces.com/assets/images/industries/education-hero.png">
+    </form>
+
+ 
+</body>  
+</html>  
+
+
+
+
+
+
+
+
+
+
+
+
+
