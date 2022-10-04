@@ -1,0 +1,24 @@
+{% load static %}
+
+<style>
+    #box{
+        background-color: lightpurple;
+        width: 300px;
+        border: 5px solid purple;
+        padding: 50px;
+        margin: 20px;
+    }
+</style>
+
+
+<div id="box">
+    <h1>{{student.first_name}} {{student.last_name}}</h1>
+    <img src="{{student.profile_picture.url}}"/>
+    <h4> Gender: {{student.my_gender}}</h4>
+    <h4> Stream: {{student.my_stream}}</h4>
+    <h4> Nationality: {{student.nationality}}</h4>
+    <h4>Address: {{student.myaddress}}</h4>
+    <h4>Email: {{student.my_email}}</h4>
+    <h4>Contact: {{student.my_contact}}</h4>
+</div>
+

@@ -20,15 +20,40 @@
       padding: 8px;
     }
     
-    #studentInfo tr:nth-child(even){background-color: #f2f2f2;}
     
-    #studentInfo tr:hover {background-color: #ddd;}
+    #studentInfo tr:hover {background-color: #C5B4E3;}
     
     #studentInfo th {
       padding-top: 12px;
       padding-bottom: 12px;
       text-align: left;
-      background-color: #04AA6D;
+      background-color: #800080;
+      color: white;
+    }
+    .button {
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+      height:10%;
+    }
+    
+    .button1 {
+      background-color:#C5B4E3; 
+      color: black; 
+      margin-left: 43%;
+      margin-top:3%;
+     
+     
+    } 
+    .button1:hover {
+      background-color: #800080;
       color: white;
     }
     </style>
@@ -43,9 +68,11 @@
     <th>Gender</th>
     <th>Address</th>
     <th>Stream</th>
-    <th>Age</th>
     <th>Phone Number</th>
     <th>Nationality</th>
+ 
+
+    <th>Profile</th>
 
 
     </tr>
@@ -60,12 +87,13 @@
         {% comment %} <td>{{student.age}}</td> {% endcomment %}
         <td>{{student.my_contact}}</td>
         <td>{{student.nationality}}</td>
+        <td><a href="{%url 'student_profile' id=student.id%}">view Profile</a>
      </tr>
      {% endfor %}
     </table>
 
      <a href= "{% url 'studentForm' %}">
-    <button class="button1">Add Student</button>
+    <button class="button button1">Add Student</button>
     </a>
 </body>
 </html>

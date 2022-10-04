@@ -1,4 +1,7 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render, redirect
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import login, authenticate
+from django.contrib.auth.decorators import login_required
 
 from SchoolSystem.models import Staff, Student, Teacher
 from SchoolSystem.forms import StaffForm, StudentForm
@@ -45,8 +48,36 @@ def staffsForm(request):
     else:
         staff_form=StaffForm
 
-    return render(request,"staffForm.html",{'form':staff_form})    
+    return render(request,"staffForm.html",{'form':staff_form})  
 
+def student_profile(request,id):
+    student=Student.objects.get(id=id)
+    return render(request,"student_profile.html",{"student":student}) 
+
+def our_team(request):
+    return render(request,"team.html") 
+
+@login_required
+def home(request):
+    return render(request, "akirachix.html", {})
+ 
+def register(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password1')
+            user = authenticate(username = username, password = password)
+            login(request, user)
+            return redirect('akirachix')
+    else:
+        form = UserCreationForm()
+    return render(request, 'register.html', {'form': form})   
+
+
+
+            
 
 
 

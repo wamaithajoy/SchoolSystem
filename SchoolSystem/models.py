@@ -1,29 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 from django.db import models
 from django.utils import timezone
 
@@ -39,7 +13,7 @@ class School(models.Model):
 class Student(models.Model):
     first_name=models.CharField(max_length=15,null=True)  
     last_name=models.CharField(max_length=15,null=True)
-    my_email=models.EmailField(max_length=20,null=True)
+    my_email=models.EmailField(max_length=40,null=True)
     GENDER_CHOICES=(
         ("Female","Female"),("Male","Male"),("Prefer not to say","Prefer not to say")
     )
@@ -49,17 +23,13 @@ class Student(models.Model):
         ("Adalab","Adalab"),("Annita B","Annita B"),("Hopper Lab","Hopper Lab")
     )
     my_stream=models.CharField(max_length=15,null=True,choices=STREAM_CHOICES)
-    # age=models.PositiveSmallIntegerField(null=True)
-    # admission_number=models.IntegerField(null=True)
     my_contact=models.IntegerField(null=True)
     NATIONALITY={
         ("Kenya","Kenya"),("Tanzania","Tanzania"),("Uganda","Uganda"),("Rwanda","Rwanda"),
         ("South Sudan","South Sudan")
     }
     nationality=models.CharField(max_length=30,null=True,choices=NATIONALITY)
-
-    # emergency_contact=models.IntegerField(null=True)
-    profile=models.ImageField
+    profile_picture = models.ImageField(upload_to='static/images/profile_picture/',null=True)
 
 class StudentId(models.Model):
     student=models.ForeignKey('Student',null=True,on_delete=models.CASCADE,related_name="StudentId_Student")  

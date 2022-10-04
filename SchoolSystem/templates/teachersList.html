@@ -14,7 +14,7 @@
   #meet{
     margin-left: 43%;
     font-size:150%; 
-    margin-top:-3%;
+    margin-top:-4%;
   }
 
   #codehive{
@@ -83,16 +83,52 @@
     height:47vh;
     margin-top:-21.2%;
   }
+  .button {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    height:10%;
+  }
+  
+  .button1 {
+    background-color:#BF40BF; 
+    color: black; 
+    margin-left: 76%;
+    margin-top:-5%;
+   
+   
+  } 
+  .button1:hover {
+    background-color: #800080;
+    color: white;
+  }
+
+  #ourteachers{
+    margin-top:-3%;
+  }
   
   
 </style>
 <body>
-  
-<div id="codehive">
+   
+
+  <div id="codehive">
   <img id="codehive" src="https://akirachix.com/img/code-hive.png?_cchid=138194327577c036438d36774d26b056">
 </div>
 <h1 id="meet">Meet our Instructors</h1>
-
+<div>
+  <a href= "{% url 'ourteam' %}">
+    <button class="button button1">Codehive Team</button>
+  </a>
+</div>
+<div id="ourteachers">
 <div id="teacher">
   <img id="teacher" src="https://akirachix.com/img/mwai-james.png?_cchid=6ab37ba819c550fbe83be343409289de">
 </div>
@@ -149,8 +185,7 @@
   <h4>Career Coach</h4>
 </div>
 
-
-
+</div>
 
 </body>
 </html>
